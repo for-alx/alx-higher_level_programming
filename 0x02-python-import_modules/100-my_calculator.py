@@ -9,6 +9,7 @@ if __name__ == '__main__':
 
     if length <= 3:
         print("{}".format(warning))
+        exit(1)
     else:
         a = int(argv[1])
         b = int(argv[3])
@@ -23,4 +24,5 @@ if __name__ == '__main__':
         elif operator == '/':
             print("{} {} {} = {}".format(a, operator, b, div(a, b)))
         else:
-            print("{}\n{}".format(warning2, 1))
+            print("{}".format(warning2))
+            exit(1)
