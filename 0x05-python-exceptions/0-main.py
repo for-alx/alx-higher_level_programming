@@ -1,32 +1,23 @@
-#!/usr/bin/python3
-
-# list_division = __import__('4-list_division').list_division
-
-# my_l_1 = [10, 8, 4]
-# my_l_2 = [2, 4, 4]
-# result = list_division(my_l_1, my_l_2, max(len(my_l_1), len(my_l_2)))
-# print(result)
-
-# print("--")
-
-# my_l_1 = [10, 8, 4, 4]
-# my_l_2 = [2, 0, "H", 2, 7]
-# result = list_division(my_l_1, my_l_2, max(len(my_l_1), len(my_l_2)))
-# print(result)
+# !/usr/bin/python3
 
 
+##### 7
+safe_print_integer_err = __import__('100-safe_print_integer_err').safe_print_integer_err
 
-##### 5
-# raise_exception_msg = __import__('6-raise_exception_msg').raise_exception_msg
+value = 89
+has_been_print = safe_print_integer_err(value)
+if not has_been_print:
+    print("{} is not an integer".format(value))
 
-# try:
-# 	raise_exception_msg("C is fun")
-# except NameError as ne:
-# 	print(ne)
+value = -89
+has_been_print = safe_print_integer_err(value)
+if not has_been_print:
+    print("{} is not an integer".format(value))
 
-
-##### 6
-
+value = "School"
+has_been_print = safe_print_integer_err(value)
+if not has_been_print:
+    print("{} is not an integer".format(value))
 
 
 
