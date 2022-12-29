@@ -1,0 +1,43 @@
+The ``0-add_integer`` module
+============================
+
+Using ``0-add_integer.py``
+--------------------------
+
+First import ``add_integer`` function from ``0-add_integer.py`` module:
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Normal number test:
+	>>> add_integer(10, 10)
+	20
+
+One argument test:
+	>>> add_integer(20)
+	118
+
+One negative number:
+	>>> add_integer(-20, 30)
+	10
+
+Two negative number:
+	>>> add_integer(-7, -15)
+	-22
+
+One float number test:
+	>>> add_integer(2.3)
+	100
+
+Two float number test:
+	>>> add_integer(3.2, 4.5)
+	7
+
+String parameter test:
+	>>> add_integer('abc', 4.5)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+More than two parameters:
+	>>> add_integer(1, 2, 3)
+	Traceback (most recent call last):
+	...
+	TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
