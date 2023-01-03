@@ -1,22 +1,13 @@
 #!/usr/bin/python3
 """
-    This module calculate the sum of two numbers
-    with argument parameter control
+This is the 0-add_integer module
+It contains 1 function, add_integer(a, b)
 """
 
 
 def add_integer(a, b=98):
     """
-    This function return the addition of two numbers
-    a and b must be integers or floats
-    otherwise raise a TypeError exception with the message
-    'a must be an integer' or 'b must be an integer'
-
-    Args:
-        a (int):
-        b (int):
-    Returns:
-        int: return addition of two numbers without decimal point
+    return addition of two numbers without decimal point
     """
     if type(a) != float and type(a) != int:
         raise TypeError('a must be an integer')

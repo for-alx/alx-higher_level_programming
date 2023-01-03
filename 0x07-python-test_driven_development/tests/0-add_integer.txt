@@ -11,10 +11,6 @@ Normal number test:
 	>>> add_integer(10, 10)
 	20
 
-One argument test:
-	>>> add_integer(20)
-	118
-
 One negative number:
 	>>> add_integer(-20, 30)
 	10
@@ -23,16 +19,21 @@ Two negative number:
 	>>> add_integer(-7, -15)
 	-22
 
-One float number test:
-	>>> add_integer(2.3)
-	100
+One argument test:
+	>>> add_integer(20)
+	118
 
 Two float number test:
 	>>> add_integer(3.2, 4.5)
 	7
 
-String parameter test:
+One string parameter test:
 	>>> add_integer('abc', 4.5)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+Two string parameter test:
+	>>> add_integer('abc', 'cde')
 	Traceback (most recent call last):
 	TypeError: a must be an integer
 
