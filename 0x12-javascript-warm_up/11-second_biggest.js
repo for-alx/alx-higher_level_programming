@@ -1,7 +1,6 @@
 #!/usr/bin/node
-const argList = process.argv;
-if (argList.length <= 3) {
+if (process.argv.length < 4) {
   console.log(0);
 } else {
-  console.log(argList.sort().reverse()[1]);
+  console.log(process.argv.splice(2, process.argv.length - 1).sort().reverse()[1]);
 }
