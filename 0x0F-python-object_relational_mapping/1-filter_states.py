@@ -11,9 +11,12 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host='localhost', user=args[1],
                          passwd=args[2], db=args[3])
     cur = db.cursor()
-    cur.execute("SELECT * from states WHERE name LIKE 'N%' ORDER BY states.id")
-    rows = cur.fetchall()
-    for row in rows:
-        print(row)
-    cur.close()
-    db.close()
+    cur.execute("SELECT * \
+    FROM states \
+    WHERE CONVERT(`name` USING Latin1) \
+    COLLATE Latin1_General_CS \
+    LIKE 'N%';")
+    states = cur.fetchall()
+
+    for state in states:
+        print(state)
