@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+List all cities of a state
+"""
 if __name__ == '__main__':
     import sys
     import MySQLdb
