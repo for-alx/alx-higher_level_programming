@@ -14,7 +14,7 @@ if __name__ == '__main__':
 
     session = Session(bind=engine)
 
-    result = session.query(State).order_by(State.id)[0]
+    result = session.query(State).order_by(State.id).first()
 
     if (not result):
         print("Nothing")
