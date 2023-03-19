@@ -1,17 +1,12 @@
 #!/usr/bin/python3
-"""
-Contains the class definition of a City
-"""
-
-from model_state import Base, State
-from sqlalchemy import Column, Integer, String, MetaData
-from sqlalchemy import ForeignKey
+''' module relationship_city contains class City '''
+from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy.orm import relationship
+from relationship_state import Base, State
 
 
 class City(Base):
-    """
-    Class that defines each city
-    """
+    ''' empty class City that inherits from Base '''
     __tablename__ = 'cities'
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
