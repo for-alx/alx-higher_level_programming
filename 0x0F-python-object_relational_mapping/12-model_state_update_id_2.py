@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Adds the State object "Lousiana" to the database hbtn_0e_6_usa
+Changes the name of a State object from the database hbtn_0e_6_usa
 """
 
 if __name__ == '__main__':
@@ -15,10 +15,8 @@ if __name__ == '__main__':
 
     session = Session(bind=engine)
 
-    louisiana_state = State(name='Louisiana')
+    record = session.query(State).filter(State.id == 2).first()
 
-    session.add(louisiana_state)
-
-    session.commit()
-
-    print(louisiana_state.id)
+    if record:
+        record.name = 'New Mexico'
+        session.commit()
