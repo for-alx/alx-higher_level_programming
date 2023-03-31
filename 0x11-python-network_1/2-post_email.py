@@ -2,6 +2,7 @@
 """
 POST an email.
 """
+
 if __name__ == '__main__':
     import sys
     from urllib.request import Request, urlopen
@@ -13,4 +14,4 @@ if __name__ == '__main__':
     req = Request(str(sys.argv[1]), data)
     with urlopen(req) as response:
         the_page = response.read()
-        print(the_page.decode('utf-8'))
+        print(str(the_page.decode('utf-8')))
